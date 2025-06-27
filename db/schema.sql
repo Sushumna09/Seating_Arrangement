@@ -1,0 +1,2 @@
+-- schema.sql
+-- This file will define the database schema for storing routes and nodes. 

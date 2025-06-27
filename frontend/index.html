@@ -1,0 +1,75 @@
+<!-- index.html -->
+<!-- This file will serve as the main entry point for the route planner web application. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seating Arrangement System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Seating Arrangement System</h1>
+        
+        <!-- Layout Configuration -->
+        <div class="config-section">
+            <h2>Layout Configuration</h2>
+            <div class="config-controls">
+                <label for="rows">Rows:</label>
+                <input type="number" id="rows" min="1" max="10" value="3">
+                <label for="cols">Columns:</label>
+                <input type="number" id="cols" min="1" max="10" value="4">
+                <button onclick="createSeatingLayout()">Create Layout</button>
+            </div>
+        </div>
+
+        <!-- People Management -->
+        <div class="people-section">
+            <h2>People Management</h2>
+            <div class="add-person">
+                <input type="text" id="personName" placeholder="Name">
+                <input type="number" id="personAge" placeholder="Age" min="1" max="100">
+                <select id="personGender">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+                <input type="text" id="personPreferences" placeholder="Preferences (front,window,etc.)">
+                <input type="text" id="personConflicts" placeholder="Conflicts (name1,name2)">
+                <button onclick="addPerson()">Add Person</button>
+            </div>
+            
+            <div class="people-list">
+                <h3>Available People</h3>
+                <div id="peopleList" class="people-grid"></div>
+            </div>
+        </div>
+
+        <!-- Seating Layout -->
+        <div class="seating-section">
+            <h2>Seating Layout</h2>
+            <div id="seatingLayout" class="seating-grid"></div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats-section">
+            <h2>Statistics</h2>
+            <div id="statistics" class="stats-display">
+                <p>People assigned: <span id="assignedCount">0</span></p>
+                <p>Conflicts resolved: <span id="conflictsResolved">0</span></p>
+                <p>Satisfaction score: <span id="satisfactionScore">0</span>%</p>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="actions-section">
+            <button onclick="autoArrange()" class="primary-btn">Auto Arrange</button>
+            <button onclick="clearLayout()" class="secondary-btn">Clear Layout</button>
+            <button onclick="exportLayout()" class="secondary-btn">Export Layout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
