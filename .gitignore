@@ -5,6 +5,35 @@
 *.obj
 backend/seating
 
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.app
+
 # IDE files
 .vscode/
 .idea/
@@ -41,4 +70,4 @@ node_modules/
 
 # Build directories
 build/
-dist/ 
+dist/
